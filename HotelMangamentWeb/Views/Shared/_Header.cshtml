@@ -1,0 +1,39 @@
+﻿@using HotelMangamentWeb.Models;
+
+<div class="wrap">
+    <a href="/"><img src="~/Content/images/logo.png" width="284" height="189" /></a>
+    @if (Session["TaiKhoan"] == null)
+    {
+        <div class="dang-nhap">
+            <label>Chào Khách!</label>
+            <a href="/CaNhan/DangNhap">Đăng Nhập</a>
+        </div>
+    }
+    else
+    {
+        <div class="dang-nhap">
+            <label>Chào @(((TaiKhoan)Session["TaiKhoan"]).HoTen)!</label>
+            <a href="/CaNhan/DangXuat">Đăng Xuất</a>
+        </div>
+    }
+    <div class="header">
+        <div class="header_bottom">
+            <div class="menu">
+                <ul>
+                    <li id="li-0"><a href="/TrangChu/TrangChu">Trang Chủ</a></li>
+                    <li id="li-1"><a href="/DatPhong/DSPhong">Đặt Phòng</a></li>
+                    <li id="li-2"><a href="/CaNhan/CaNhan">Cá Nhân</a></li>
+                    <li id="li-3"><a href="/TrangChu/TinTuc">Tin Tức</a></li>
+                    <li id="li-4"><a href="/TrangChu/LienHe">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.DiaChi == null) { ViewBag.DiaChi = 0; }
+
+<script>
+    var li = document.getElementById('li-@ViewBag.DiaChi');
+    li.classList.add('active');
+</script>

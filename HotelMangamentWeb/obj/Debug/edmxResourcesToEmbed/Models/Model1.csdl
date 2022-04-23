@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hotelDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DatPhong">
+    <Key>
+      <PropertyRef Name="MaDatPhong" />
+    </Key>
+    <Property Name="MaDatPhong" Type="Int32" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MaPhong" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NgayDat" Type="DateTime" Precision="0" />
+    <Property Name="NgayDen" Type="DateTime" Precision="0" />
+    <Property Name="NgayTra" Type="DateTime" Precision="0" />
+    <Property Name="DichVu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ThanhTien" Type="Int32" />
+    <NavigationProperty Name="Phong" Relationship="Self.FK__DatPhong__MaPhon__2C3393D0" FromRole="DatPhong" ToRole="Phong" />
+    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__DatPhong__TenTai__2B3F6F97" FromRole="DatPhong" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="DichVu">
+    <Key>
+      <PropertyRef Name="MaDichVu" />
+    </Key>
+    <Property Name="MaDichVu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenDichVu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GiaDichVu" Type="Int32" />
+  </EntityType>
+  <EntityType Name="LoaiPhong">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+    </Key>
+    <Property Name="MaLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenLoai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DuongDanAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Phongs" Relationship="Self.FK__Phong__MaLoai__267ABA7A" FromRole="LoaiPhong" ToRole="Phong" />
+  </EntityType>
+  <EntityType Name="Phong">
+    <Key>
+      <PropertyRef Name="MaPhong" />
+    </Key>
+    <Property Name="MaPhong" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenPhong" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DienTich" Type="Int32" />
+    <Property Name="GiaThue" Type="Int32" />
+    <NavigationProperty Name="DatPhongs" Relationship="Self.FK__DatPhong__MaPhon__2C3393D0" FromRole="Phong" ToRole="DatPhong" />
+    <NavigationProperty Name="LoaiPhong" Relationship="Self.FK__Phong__MaLoai__267ABA7A" FromRole="Phong" ToRole="LoaiPhong" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="TenTaiKhoan" />
+    </Key>
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HoTen" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="LaAdmin" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DatPhongs" Relationship="Self.FK__DatPhong__TenTai__2B3F6F97" FromRole="TaiKhoan" ToRole="DatPhong" />
+  </EntityType>
+  <Association Name="FK__DatPhong__MaPhon__2C3393D0">
+    <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+    <End Role="DatPhong" Type="Self.DatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phong">
+        <PropertyRef Name="MaPhong" />
+      </Principal>
+      <Dependent Role="DatPhong">
+        <PropertyRef Name="MaPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DatPhong__TenTai__2B3F6F97">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+    <End Role="DatPhong" Type="Self.DatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="TenTaiKhoan" />
+      </Principal>
+      <Dependent Role="DatPhong">
+        <PropertyRef Name="TenTaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Phong__MaLoai__267ABA7A">
+    <End Role="LoaiPhong" Type="Self.LoaiPhong" Multiplicity="0..1" />
+    <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiPhong">
+        <PropertyRef Name="MaLoai" />
+      </Principal>
+      <Dependent Role="Phong">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="hotelDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DatPhongs" EntityType="Self.DatPhong" />
+    <EntitySet Name="DichVus" EntityType="Self.DichVu" />
+    <EntitySet Name="LoaiPhongs" EntityType="Self.LoaiPhong" />
+    <EntitySet Name="Phongs" EntityType="Self.Phong" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+    <AssociationSet Name="FK__DatPhong__MaPhon__2C3393D0" Association="Self.FK__DatPhong__MaPhon__2C3393D0">
+      <End Role="Phong" EntitySet="Phongs" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DatPhong__TenTai__2B3F6F97" Association="Self.FK__DatPhong__TenTai__2B3F6F97">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Phong__MaLoai__267ABA7A" Association="Self.FK__Phong__MaLoai__267ABA7A">
+      <End Role="LoaiPhong" EntitySet="LoaiPhongs" />
+      <End Role="Phong" EntitySet="Phongs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
