@@ -194,6 +194,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\beach.jpeg" />
     <Content Include="images\bg.jpg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -346,6 +347,9 @@
     <Content Include="Views\SharedAdmin\_Layout.cshtml" />
     <Content Include="Views\SharedAdmin\_MenuTraiAdmin.cshtml" />
     <Content Include="Views\Shared\_MenuTraiCaNhan.cshtml" />
+    <Content Include="Views\CaNhan\DangKy.cshtml" />
+    <Content Include="Views\Shared\_LayoutSignUp.cshtml" />
+    <Content Include="Views\CaNhan\DangKyThanhCong.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

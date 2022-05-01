@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Đăng Ký";
+    Layout = "~/Views/Shared/_LayoutSignUp.cshtml";
+}
+
+@using HotelMangamentWeb.Models.ViewModels
+@model TaiKhoanDangKyView
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section"><strong>SignUp</strong></h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap p-0">
+                    <form action="#" class="signin-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="TenTaiKhoan" placeholder="Username" required value="@Model.TenTaiKhoan">
+                            <span class="canh-bao">@Html.ValidationMessageFor(m => m.TenTaiKhoan)</span>
+                        </div>
+                        <div class="form-group">
+                            <input id="password-field" type="password" class="form-control" name="MatKhau" placeholder="Enter Password" required value="@Model.MatKhau">
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            <span class="canh-bao">@Html.ValidationMessageFor(m => m.MatKhau)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="password-field" type="password" class="form-control" name="XacNhanMatKhau" placeholder="Enter Password again" value="@Model.XacNhanMatKhau">
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            <span class="canh-bao">@Html.ValidationMessageFor(m => m.XacNhanMatKhau)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="HoTen" placeholder="Enter your full name" required value="@Model.HoTen">
+                            <span class="canh-bao">@Html.ValidationMessageFor(m => m.HoTen)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="SoDienThoai" placeholder="Số Điện Thoại" required value="@Model.SoDienThoai">
+                            <span class="canh-bao">@Html.ValidationMessageFor(m => m.TenTaiKhoan)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="Email" placeholder="Email" required value="@Model.Email">
+                            <span class="canh-bao">@Html.ValidationMessageFor(m => m.Email)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="form-control btn btn-primary submit px-3">Sign Up</button>
+                        </div>
+
+                        <h5><span style="color:#fff">Already have an account?&nbsp;</span></h5>
+                        <h5><a href="/CaNhan/DangNhap/">Log in</a></h5>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+    }

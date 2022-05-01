@@ -87,7 +87,6 @@ namespace HotelMangamentWeb.Controllers
             return View(new TaiKhoan());
         }
 
-        //Chương trìng sẽ ,không đăng xuât tài khoản khỏi chương trình trong vào 1 ngày
         public ActionResult DangXuat()
         {
             Session["TaiKhoan"] = null;

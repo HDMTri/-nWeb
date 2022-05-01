@@ -81,3 +81,7 @@ C:\Users\Evan Huynh\OneDrive\Documents\Do An Web\HotelMangamentWeb\obj\Debug\Hot
 C:\Users\Evan Huynh\OneDrive\Documents\Do An Web\HotelMangamentWeb\obj\Debug\HotelMangamentWeb.dll
 C:\Users\Evan Huynh\OneDrive\Documents\Do An Web\HotelMangamentWeb\obj\Debug\HotelMangamentWeb.pdb
 C:\Users\Evan Huynh\OneDrive\Documents\Do An Web\HotelMangamentWeb\obj\Debug\HotelMangamentWeb.csproj.AssemblyReference.cache
+C:\Github\HotelMangamentWeb\HotelMangamentWeb\obj\Debug\HotelMangamentWeb.csproj.AssemblyReference.cache
+C:\Github\HotelMangamentWeb\HotelMangamentWeb\obj\Debug\HotelMangamentWeb.csproj.CoreCompileInputs.cache
+C:\Github\HotelMangamentWeb\HotelMangamentWeb\obj\Debug\HotelMangamentWeb.dll
+C:\Github\HotelMangamentWeb\HotelMangamentWeb\obj\Debug\HotelMangamentWeb.pdb
