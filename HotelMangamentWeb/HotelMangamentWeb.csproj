@@ -140,6 +140,10 @@
     <Compile Include="Models\DichVu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Functions\HamDatPhong.cs" />
+    <Compile Include="Models\Functions\HamDichVu.cs" />
+    <Compile Include="Models\Functions\HamLoaiPhong.cs" />
+    <Compile Include="Models\Functions\HamPhong.cs" />
     <Compile Include="Models\Functions\HamTaiKhoan.cs" />
     <Compile Include="Models\LoaiPhong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -168,6 +172,7 @@
     <Compile Include="Models\TaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\PhongView.cs" />
     <Compile Include="Models\ViewModels\TaiKhoanDangKyView.cs" />
     <Compile Include="Models\ViewModels\TaiKhoanDangNhapView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +201,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\beach.jpeg" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\logo.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -337,7 +343,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLogIn.cshtml" />
     <Content Include="Views\CaNhan\Index.cshtml" />
-    <Content Include="Views\MainHome\LogIn.cshtml" />
+    <Content Include="Views\MainHome\TrangChu.cshtml" />
     <Content Include="Views\CaNhan\CaNhan.cshtml" />
     <Content Include="Views\TrangChu\TrangChu.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
@@ -350,6 +356,26 @@
     <Content Include="Views\CaNhan\DangKy.cshtml" />
     <Content Include="Views\Shared\_LayoutSignUp.cshtml" />
     <Content Include="Views\CaNhan\DangKyThanhCong.cshtml" />
+    <Content Include="Views\HamDatPhong\Create.cshtml" />
+    <Content Include="Views\HamDatPhong\Delete.cshtml" />
+    <Content Include="Views\HamDatPhong\Details.cshtml" />
+    <Content Include="Views\HamDatPhong\Edit.cshtml" />
+    <Content Include="Views\HamDatPhong\Index.cshtml" />
+    <Content Include="Views\HamPhong\Create.cshtml" />
+    <Content Include="Views\HamPhong\Delete.cshtml" />
+    <Content Include="Views\HamPhong\Details.cshtml" />
+    <Content Include="Views\HamPhong\Edit.cshtml" />
+    <Content Include="Views\HamPhong\Index.cshtml" />
+    <Content Include="Views\HamLoaiPhong\Create.cshtml" />
+    <Content Include="Views\HamLoaiPhong\Delete.cshtml" />
+    <Content Include="Views\HamLoaiPhong\Details.cshtml" />
+    <Content Include="Views\HamLoaiPhong\Edit.cshtml" />
+    <Content Include="Views\HamLoaiPhong\Index.cshtml" />
+    <Content Include="Views\HamDichVu\Create.cshtml" />
+    <Content Include="Views\HamDichVu\Delete.cshtml" />
+    <Content Include="Views\HamDichVu\Details.cshtml" />
+    <Content Include="Views\HamDichVu\Edit.cshtml" />
+    <Content Include="Views\HamDichVu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
