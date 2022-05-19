@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CaNhanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Models\TaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\LichSuView.cs" />
     <Compile Include="Models\ViewModels\PhongView.cs" />
     <Compile Include="Models\ViewModels\TaiKhoanDangKyView.cs" />
     <Compile Include="Models\ViewModels\TaiKhoanDangNhapView.cs" />
@@ -188,9 +190,15 @@
     <Content Include="Content\css\bootstrap\mixins\_screen-reader.css" />
     <Content Include="Content\css\bootstrap\mixins\_text-hide.css" />
     <Content Include="Content\css\bootstrap\mixins\_visibility.css" />
+    <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap\utilities\_stretched-link.css" />
     <Content Include="Content\css\bootstrap\_media.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\styleHome.css" />
+    <Content Include="Content\images\connect.jpg" />
+    <Content Include="Content\images\high.jpg" />
+    <Content Include="Content\images\mid.jpg" />
+    <Content Include="Content\images\vip.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery.min.js" />
     <Content Include="Content\js\main.js" />
@@ -199,9 +207,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\images\basic.jpg" />
     <Content Include="images\beach.jpeg" />
     <Content Include="images\bg.jpg" />
     <Content Include="images\logo.png" />
+    <Content Include="images\sticker_facebook.png" />
+    <Content Include="images\sticker_youtube.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -342,7 +353,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLogIn.cshtml" />
-    <Content Include="Views\CaNhan\Index.cshtml" />
     <Content Include="Views\MainHome\TrangChu.cshtml" />
     <Content Include="Views\CaNhan\CaNhan.cshtml" />
     <Content Include="Views\TrangChu\TrangChu.cshtml" />
@@ -356,30 +366,27 @@
     <Content Include="Views\CaNhan\DangKy.cshtml" />
     <Content Include="Views\Shared\_LayoutSignUp.cshtml" />
     <Content Include="Views\CaNhan\DangKyThanhCong.cshtml" />
-    <Content Include="Views\HamDatPhong\Create.cshtml" />
-    <Content Include="Views\HamDatPhong\Delete.cshtml" />
-    <Content Include="Views\HamDatPhong\Details.cshtml" />
-    <Content Include="Views\HamDatPhong\Edit.cshtml" />
-    <Content Include="Views\HamDatPhong\Index.cshtml" />
-    <Content Include="Views\HamPhong\Create.cshtml" />
-    <Content Include="Views\HamPhong\Delete.cshtml" />
-    <Content Include="Views\HamPhong\Details.cshtml" />
-    <Content Include="Views\HamPhong\Edit.cshtml" />
-    <Content Include="Views\HamPhong\Index.cshtml" />
-    <Content Include="Views\HamLoaiPhong\Create.cshtml" />
-    <Content Include="Views\HamLoaiPhong\Delete.cshtml" />
-    <Content Include="Views\HamLoaiPhong\Details.cshtml" />
-    <Content Include="Views\HamLoaiPhong\Edit.cshtml" />
-    <Content Include="Views\HamLoaiPhong\Index.cshtml" />
-    <Content Include="Views\HamDichVu\Create.cshtml" />
-    <Content Include="Views\HamDichVu\Delete.cshtml" />
-    <Content Include="Views\HamDichVu\Details.cshtml" />
-    <Content Include="Views\HamDichVu\Edit.cshtml" />
-    <Content Include="Views\HamDichVu\Index.cshtml" />
+    <Content Include="Views\CaNhan\LichSu.cshtml" />
+    <Content Include="Views\DatPhong\DatPhong.cshtml" />
+    <Content Include="Views\DatPhong\DatPhongThanhCong.cshtml" />
+    <Content Include="Views\DatPhong\DSPhong.cshtml" />
+    <Content Include="Views\DatPhong\LoaiPhong.cshtml" />
+    <Content Include="Views\DatPhong\TimKiem.cshtml" />
+    <Content Include="Views\Admin\DSDichVu.cshtml" />
+    <Content Include="Views\Admin\DSLoaiPhong.cshtml" />
+    <Content Include="Views\Admin\DSPhong.cshtml" />
+    <Content Include="Views\Admin\DSTaiKhoan.cshtml" />
+    <Content Include="Views\Admin\SuaDichVu.cshtml" />
+    <Content Include="Views\Admin\SuaLoaiPhong.cshtml" />
+    <Content Include="Views\Admin\SuaPhong.cshtml" />
+    <Content Include="Views\Admin\SuaTaiKhoan.cshtml" />
+    <Content Include="Views\Admin\ThemDichVu.cshtml" />
+    <Content Include="Views\Admin\ThemLoaiPhong.cshtml" />
+    <Content Include="Views\Admin\ThemPhong.cshtml" />
+    <Content Include="Views\Admin\ThemTaiKhoan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SharedLogIn\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -3,25 +3,56 @@
     Layout = "~/Views/Shared/_LayoutSignUp.cshtml";
 }
 
-@using HotelMangamentWeb.Models.ViewModels
-@model TaiKhoanDangKyView
+@using HotelMangamentWeb.Models;
+@model TaiKhoan
 
-<h3>Đăng Ký Thành Công</h3>
-<br/>
-<div class="container dang-nhap-form">
-    <table class="bang-dang-ky-thanh-cong">
-        <colgroup>
-            <col style="width: 50%" />
-            <col style="width: 50%" />
-        </colgroup>
-        <tbody>
-            <tr><th>Tài Khoản:</th><th><span style="color: #8A2BE2">@Model.TenTaiKhoan</span></th></tr>
-            <tr><th>Mật Khẩu:</th><th><span style="color: #4682B4">@Model.MatKhau</span></th></tr>
-            <tr><th>Họ Tên:</th><th><span style="color: #D2691E">@Model.HoTen</span></th></tr>
-            <tr><th>Số Điện Thoại:</th><th><span style="color: #008000">@Model.SoDienThoai</span></th></tr>
-            <tr><th>Email:</th><th><span style="color: #FF4500">@Model.Email</span></th></tr>
-        </tbody>
-    </table>
-</div>
-<br />
-<h4><a href="/CaNhan/DangNhap">Log in</a></h4>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section"><strong>Sign Up Successfully</strong></h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap p-0">
+                    <form action="#" class="signin-form">
+                        <div class="form-group">
+                            <bold>Username:<span class="form-control">@Model.TenTaiKhoan</span></bold>
+
+                        </div>
+                        <div class="form-group">
+                            <bold>Password:<span class="form-control">@Model.MatKhau</span></bold>
+
+                        </div>
+
+                        <div class="form-group">
+                            <bold>Name:<span class="form-control">@Model.HoTen</span></bold>
+
+                        </div>
+
+                        <div class="form-group">
+                            <bold>Your Phone Number:<span class="form-control">@Model.SoDienThoai</span></bold>
+
+                        </div>
+
+                        <div class="form-group">
+                            <bold>Email:<span class="form-control">@Model.Email</span></bold>
+
+                        </div> 
+
+                        <h5><span style="color:#fff">Go back to&nbsp;<a href="/CaNhan/DangNhap/">Log in</a></span></h5>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+}

@@ -10,118 +10,55 @@ using HotelMangamentWeb.Models;
 
 namespace HotelMangamentWeb.Models.Functions
 {
-    public class HamDichVu : Controller
+    //Hàm Dịch vụ
+    public class HamDichVu
     {
-        private hotelDBEntities db = new hotelDBEntities();
+        private hotelDBEntities db;
 
-        // GET: HamDichVu
-        public ActionResult Index()
+        public HamDichVu()
         {
-            return View(db.DichVus.ToList());
+            db = new hotelDBEntities();
+        }
+        //IQueryable được dành cho các nhà cung cấp truy vấn triển khai
+        public IQueryable<DichVu> DichVus
+        {
+            get { return db.DichVus; }
         }
 
-        // GET: HamDichVu/Details/5
-        public ActionResult Details(string id)
+        //Thêm các thông tin về dịch vụ vào trong DB
+        public string Insert(DichVu model)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            DichVu dichVu = db.DichVus.Find(id);
-            if (dichVu == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dichVu);
-        }
-
-        // GET: HamDichVu/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: HamDichVu/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaDichVu,TenDichVu,GiaDichVu")] DichVu dichVu)
-        {
-            if (ModelState.IsValid)
-            {
-                db.DichVus.Add(dichVu);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(dichVu);
-        }
-
-        // GET: HamDichVu/Edit/5
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            DichVu dichVu = db.DichVus.Find(id);
-            if (dichVu == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dichVu);
-        }
-
-        // POST: HamDichVu/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaDichVu,TenDichVu,GiaDichVu")] DichVu dichVu)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(dichVu).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(dichVu);
-        }
-
-        // GET: HamDichVu/Delete/5
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            DichVu dichVu = db.DichVus.Find(id);
-            if (dichVu == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dichVu);
-        }
-
-        // POST: HamDichVu/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            DichVu dichVu = db.DichVus.Find(id);
-            db.DichVus.Remove(dichVu);
+            db.DichVus.Add(model);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return model.MaDichVu;
         }
 
-        protected override void Dispose(bool disposing)
+        //Cập nhật các thông tin về dịch vụ trong DB
+        public string Update(DichVu model)
         {
-            if (disposing)
+            DichVu dbEntry = db.DichVus.Find(model.MaDichVu);
+            if (dbEntry == null)
             {
-                db.Dispose();
+                return null;
             }
-            base.Dispose(disposing);
+            dbEntry.MaDichVu = model.MaDichVu;
+            dbEntry.TenDichVu = model.TenDichVu;
+            dbEntry.GiaDichVu = model.GiaDichVu;
+            db.SaveChanges();
+            return model.MaDichVu;
+        }
+
+        //Xóa các thông tin về dịch vụ khỏi DB
+        public string Delete(string MaDichVu)
+        {
+            DichVu dbEntry = db.DichVus.Find(MaDichVu);
+            if (dbEntry == null)
+            {
+                return null;
+            }
+            db.DichVus.Remove(dbEntry);
+            db.SaveChanges();
+            return MaDichVu;
         }
     }
 }

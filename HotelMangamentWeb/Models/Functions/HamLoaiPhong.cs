@@ -63,4 +63,3 @@ namespace HotelMangamentWeb.Models.Functions
     }
 }
 
-}

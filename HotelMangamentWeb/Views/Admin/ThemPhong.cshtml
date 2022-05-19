@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Thêm Phòng";
+    Layout = "~/Views/SharedAdmin/_Layout.cshtml";
+}
+
+@using HotelMangamentWeb.Models;
+@model Phong
+
+<script>
+    var element = document.getElementById("collapse3");
+    element.classList.add("in");
+</script>
+
+<h2 style="text-align:center">Thêm Phòng</h2>
+
+<div class="container admin-sua-thong-tin">
+    <form action="" method="post">
+        <div class="form-group">
+            <label>Mã Phòng:</label>
+            <input class="form-control dang-nhap-text" type="text" name="MaPhong" placeholder="Nhập Mã Phòng" value="@Model.MaPhong" />
+            <span class="canh-bao">@Html.ValidationMessageFor(m => m.MaPhong)</span>
+        </div>
+        <div class="form-group">
+            <label>Tên Phòng:</label>
+            <input class="form-control dang-nhap-text" type="text" name="TenPhong" placeholder="Nhập Tên Phòng" value="@Model.TenPhong" />
+            <span class="canh-bao">@Html.ValidationMessageFor(m => m.TenPhong)</span>
+        </div>
+        <div class="form-group">
+            <label>Diện Tích:</label>
+            <input class="form-control dang-nhap-text" type="number" name="DienTich" placeholder="Nhập Diện Tích" value="@Model.DienTich" />
+            <span class="canh-bao">@Html.ValidationMessageFor(m => m.DienTich)</span>
+        </div>
+        <div class="form-group">
+            <label>Giá Thuê:</label>
+            <input class="form-control dang-nhap-text" type="number" name="GiaThue" placeholder="Nhập Giá Thuê" value="@Model.GiaThue" />
+            <span class="canh-bao">@Html.ValidationMessageFor(m => m.GiaThue)</span>
+        </div>
+        <div class="form-group">
+            <label>Loại Phòng:</label>
+            <select class="form-control dang-nhap-text admin-gia-thue" name="MaLoai">
+                @foreach (LoaiPhong lp in (List<LoaiPhong>)ViewBag.listLoaiPhong)
+                {
+                    <option>@lp.MaLoai</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-ok" type="submit" value="Thêm Mới" />
+        </div>
+    </form>
+</div>
+
