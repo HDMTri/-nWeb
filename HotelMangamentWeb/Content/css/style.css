@@ -83,11 +83,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
 }
 
-
+.loai-tim-kiem {
+    display: inline !important;
+    width: 140px !important;
+}
+.muc-tim-kiem {
+    display: inline !important;
+    width: 70px !important;
+}
+.gia-tri-tim-kiem {
+    display: inline !important;
+    width: 160px !important;
+}
 
 abbr[title],
 abbr[data-original-title] {
@@ -204,6 +215,7 @@ img {
     vertical-align: middle;
     border-style: none;
 }
+
 
 svg {
     overflow: hidden;

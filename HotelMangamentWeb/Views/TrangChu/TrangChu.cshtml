@@ -6,7 +6,7 @@
 @using HotelMangamentWeb.Models;
 @model List<LoaiPhong>
 
-<h3>Đặt Phòng Khách Sạn</h3>
+<h3><center>Đặt Phòng Khách Sạn</center></h3>
 <div class="container">
     @foreach (LoaiPhong lp in @Model)
     {
@@ -18,7 +18,7 @@
         </div>
     }
 </div>
-<h3>Tìm Kiếm Phòng</h3>
+<h3><center>Tìm Kiếm Phòng</center></h3>
 <div class="container">
     <form action="/DatPhong/TimKiem" method="get">
         <label>Tìm Kiếm Theo:</label>

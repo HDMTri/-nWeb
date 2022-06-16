@@ -1,7 +1,7 @@
 ﻿@using HotelMangamentWeb.Models;
 
 <div class="wrap">
-    <a href="/"><img src="~/images/logo.png" width="284" height="189" /></a>
+    <a href="/"><center><img src="~/images/logo.png" width="384" height="289" /></center></a>
     @if (Session["TaiKhoan"] == null)
     {
         <div class="dang-nhap">
@@ -21,12 +21,12 @@
         <div class="header_bottom">
             <div class="menu">
                 <ul>
-                    <li id="li-0"><a href="/TrangChu/TrangChu">Trang Chủ</a></li>
-                    <li id="li-1"><a href="/DatPhong/DSPhong">Đặt Phòng</a></li>
+                    <li id="li-0"><a href="/TrangChu/Home">Trang Chủ</a></li>
+                    <li id="li-5"><a href="/TrangChu/TrangChu">Đặt phòng</a></li>
+                    <li id="li-1"><a href="/DatPhong/DSPhong">Danh sách</a></li>
                     <li id="li-2"><a href="/CaNhan/CaNhan">Cá Nhân</a></li>
                     <li id="li-3"><a href="/TrangChu/TinTuc">Tin Tức</a></li>
                     <li id="li-4"><a href="/TrangChu/LienHe">Liên Hệ</a></li>
-                    <li id="li-5"><a href="/TrangChu/HomePage">Liên Hệ</a></li>
                 </ul>
 
             </div>

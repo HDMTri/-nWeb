@@ -136,8 +136,9 @@ body {
 }
 
 .dang-nhap {
+    font-weight:bold;
     font-size: 20px;
-    padding-left: 700px;
+    padding-left: 850px;
 }
 
 .btn-ok {
