@@ -78,7 +78,7 @@ body {
 }
 
 .header_bottom {
-    padding-bottom: 52px;
+    padding-bottom: 58px;
     background: #303030;
     border-radius: 6px;
 }
@@ -340,7 +340,6 @@ body {
     }
 
 .wrap-footer {
-    width: 80%;
     margin: 0 15%;
 }
 
@@ -398,7 +397,6 @@ h3{
     display: block;
     float: left;
     width: 29%;
-    padding: 1.5% 0 0 0;
     border-left: 1px solid #CECECE;
     border-bottom: 1px solid #CECECE;
 }
@@ -415,16 +413,14 @@ h3{
 
     .cot-footer h4 {
         color: #f0a073;
-        margin-bottom: .5em;
         font-size: 1.4em;
         line-height: 1.2;
         font-weight: bold;
         margin-top: 0px;
         letter-spacing: -1px;
         text-transform: uppercase;
-        border-bottom: 1px solid #CECECE;
-        padding-bottom: 0.5em;
-        padding-left: 20px;
+        border-top: 1px solid #CECECE;
+        padding: 0.5em 0 0.5em 20px;
     }
 
     .cot-footer ul {
