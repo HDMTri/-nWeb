@@ -46,5 +46,9 @@ namespace HotelMangamentWeb.Controllers
         {
             return View();
         }
+        public ActionResult HomePage()
+        {
+            return View();
+        }
     }
 }

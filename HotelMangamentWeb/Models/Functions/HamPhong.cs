@@ -11,6 +11,7 @@ using HotelMangamentWeb.Models.ViewModels;
 
 namespace HotelMangamentWeb.Models.Functions
 {
+    //Hàm phòng
     public class HamPhong
     {
         private hotelDBEntities db;

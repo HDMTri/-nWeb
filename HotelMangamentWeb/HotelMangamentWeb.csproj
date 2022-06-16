@@ -130,7 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CaNhanController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\DatPhongController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,11 +208,17 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\images\basic.jpg" />
+    <Content Include="images\about_img.jpg" />
+    <Content Include="images\banner.jpg" />
     <Content Include="images\beach.jpeg" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\img1.jpg" />
+    <Content Include="images\img2.jpg" />
+    <Content Include="images\img3.jpg" />
+    <Content Include="images\img4.jpg" />
     <Content Include="images\logo.png" />
-    <Content Include="images\sticker_facebook.png" />
-    <Content Include="images\sticker_youtube.png" />
+    <Content Include="Content\images\sticker_facebook.png" />
+    <Content Include="Content\images\sticker_youtube.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -367,11 +373,6 @@
     <Content Include="Views\Shared\_LayoutSignUp.cshtml" />
     <Content Include="Views\CaNhan\DangKyThanhCong.cshtml" />
     <Content Include="Views\CaNhan\LichSu.cshtml" />
-    <Content Include="Views\DatPhong\DatPhong.cshtml" />
-    <Content Include="Views\DatPhong\DatPhongThanhCong.cshtml" />
-    <Content Include="Views\DatPhong\DSPhong.cshtml" />
-    <Content Include="Views\DatPhong\LoaiPhong.cshtml" />
-    <Content Include="Views\DatPhong\TimKiem.cshtml" />
     <Content Include="Views\Admin\DSDichVu.cshtml" />
     <Content Include="Views\Admin\DSLoaiPhong.cshtml" />
     <Content Include="Views\Admin\DSPhong.cshtml" />
@@ -384,6 +385,13 @@
     <Content Include="Views\Admin\ThemLoaiPhong.cshtml" />
     <Content Include="Views\Admin\ThemPhong.cshtml" />
     <Content Include="Views\Admin\ThemTaiKhoan.cshtml" />
+    <Content Include="Views\DatPhong\DatPhong.cshtml" />
+    <Content Include="Views\DatPhong\DatPhongThanhCong.cshtml" />
+    <Content Include="Views\DatPhong\DSPhong.cshtml" />
+    <Content Include="Views\DatPhong\LoaiPhong.cshtml" />
+    <Content Include="Views\DatPhong\TimKiem.cshtml" />
+    <Content Include="Views\TrangChu\LienHe.cshtml" />
+    <Content Include="Views\TrangChu\HomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,14 +5,14 @@
     @if (Session["TaiKhoan"] == null)
     {
         <div class="dang-nhap">
-            <label>Chào Khách!</label>
+            <label>Chào Quý Khách!</label>
             <a href="/CaNhan/DangNhap">Đăng Nhập</a>
         </div>
     }
     else
     {
 <div class="dang-nhap">
-    <label>Chào @(((TaiKhoan)Session["TaiKhoan"]).HoTen) !</label>
+    <label>Chào <span class="text-primary">@(((TaiKhoan)Session["TaiKhoan"]).HoTen)!</span></label>
     <a href="/CaNhan/DangXuat">Đăng Xuất</a>
 </div>
     }
@@ -26,7 +26,9 @@
                     <li id="li-2"><a href="/CaNhan/CaNhan">Cá Nhân</a></li>
                     <li id="li-3"><a href="/TrangChu/TinTuc">Tin Tức</a></li>
                     <li id="li-4"><a href="/TrangChu/LienHe">Liên Hệ</a></li>
+                    <li id="li-5"><a href="/TrangChu/HomePage">Liên Hệ</a></li>
                 </ul>
+
             </div>
         </div>
     </div>

@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "LienHe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.DiaChi = 4;
+}
+<h3>Liên hệ với chúng tôi</h3>
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="d-flex align-items-center border mb-3 p-4">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                    <div class="d-flex flex-column">
+                        <h5 class="font-weight-bold">Địa chỉ:</h5>
+                        <p class="m-0">123 Trần Phú, Nha Trang, Khánh Hòa</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center border mb-3 p-4">
+                    <i class="fa fa-2x fa-envelope-open text-primary mr-3"></i>
+                    <div class="d-flex flex-column">
+                        <h5 class="font-weight-bold">Email chúng tôi:</h5>
+                        <p class="m-0">evan.huynhdinh@gmail.com</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center border mb-3 mb-md-0 p-4">
+                    <i class="fas fa-2x fa-phone-alt text-primary mr-3"></i>
+                    <div class="d-flex flex-column">
+                        <h5 class="font-weight-bold">Gọi chúng tôi:</h5>
+                        <p class="m-0">+84 0378 828 320</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="control-group">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Họ và tên" required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="control-group">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Email" required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control p-4" id="subject" placeholder="Tựa đề" required="required" data-validation-required-message="Please enter a subject" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control" rows="5" id="message" placeholder="Tin nhắn" required="required" data-validation-required-message="Please enter your message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary font-weight-semi-bold px-4" style="height: 50px;" type="submit" id="sendMessageButton">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@
 
 <h3>Đặt Phòng</h3>
 <div class="container">
-    <img src=@ViewBag.DuongDanAnh alt="Image" />
+    <img src=@ViewBag.DuongDanAnh alt="Image" class="img-fluid"/>
     <br />
     <div class="phong">
         <label>Loại Phòng: @ViewBag.TenLoai</label><br />
@@ -55,7 +55,7 @@
         foreach (PhongView pv in (List<PhongView>)ViewBag.ListDatDuoc)
         {
             <div class="phong">
-                <img class="img-rounded img-phong" src=@pv.DuongDanAnh alt="Image" width="250" height="149" />
+                <img class="img-rounded img-phong img-fluid" src=@pv.DuongDanAnh alt="Image" width="250" height="149" />
                 <label>Loại Phòng: @pv.TenLoai</label><br />
                 <label>Tên Phòng: @pv.TenPhong</label><br />
                 <label>Diện Tích: @pv.DienTich m&sup2;</label><br />
