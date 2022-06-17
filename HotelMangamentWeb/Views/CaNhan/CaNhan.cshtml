@@ -7,14 +7,13 @@
 @using HotelMangamentWeb.Models.ViewModels;
 @model TaiKhoanDangKyView
 
-<h3>Trang Cá Nhân</h3>
+<h3><center>Trang Cá Nhân</center></h3>
 
 @Html.Partial("_MenuTraiCaNhan")
 
 <div class="container dang-nhap-form">
     <form action="" method="post">
         <div class="form-group">
-            <label>Tài Khoản:</label>
             <input class="form-control dang-nhap-text" type="text" name="TenTaiKhoan" value="@Model.TenTaiKhoan" readonly />
             <span style="color:red">@Html.ValidationMessageFor(m => m.TenTaiKhoan)</span>
         </div>
