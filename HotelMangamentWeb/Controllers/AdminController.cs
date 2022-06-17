@@ -53,7 +53,7 @@ namespace HotelMangamentWeb.Controllers
             ckMatKhau.Expires = DateTime.Now.AddDays(1);
             Response.Cookies.Add(ckTaiKhoan);
             Response.Cookies.Add(ckMatKhau);
-            return RedirectToAction("TrangChu", "TrangChu");
+            return RedirectToAction("Home", "TrangChu");
         }
 
         //Hiển thị danh sách các loại phòng có trong DB

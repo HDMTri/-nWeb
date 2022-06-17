@@ -143,7 +143,7 @@ namespace HotelMangamentWeb.Controllers
                 {
                     return Redirect(Session["TrangTruoc"].ToString());
                 }
-                return RedirectToAction("TrangChu", "TrangChu");
+                return RedirectToAction("Home", "TrangChu");
             }
             return RedirectToAction("DangNhap", "CaNhan");
         }
